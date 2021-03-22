@@ -639,7 +639,7 @@ namespace graph
 
 	void D2DGraphics::set_pixel(const float x, const float y, const Color color)
 	{
-		draw_line(Point{x, y}, Point{x + 1, y}, SolidBrush(color));
+		draw_line(Point{x, y}, Point{x + 0.5f, y + 0.5f}, get_solidbrush(color));
 	}
 
 	void D2DGraphics::set_pixel(const Point point, const Color color)
